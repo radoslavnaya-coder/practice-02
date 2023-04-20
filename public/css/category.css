@@ -1,0 +1,31 @@
+.categorySection {
+    display: inline-flex;
+    height: 100px;
+    margin: 0 0 0 3.3rem;
+  }
+  section a {
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .category {
+    margin: 1.9rem 1.2rem 0 0;
+    border: 1px solid #b4ffff;
+    background: #353535;
+    height: 2.4rem;
+    border-radius: 100px;
+    padding: 0.6rem 1.7rem;
+    color: white;
+  }
+  .category:hover {
+    background: #1fa3a3;
+  }
+  .categoryActive {
+    background: #b4ffff;
+    margin: 1.9rem 1.2rem 0 0;
+    border: 1px solid #b4ffff;
+    color: black;
+    height: 2.4rem;
+    border-radius: 100px;
+    padding: 0.6rem 1.7rem;
+  }
+  

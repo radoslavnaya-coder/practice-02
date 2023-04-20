@@ -1,0 +1,59 @@
+.menuSection {
+    width: 14.75rem;
+    max-width: 100%;
+    margin: 1rem 0.6rem 1rem 1.2rem;
+}  
+  .menuFirstElement{
+    margin: 1.8rem 0 0.4rem 0 !important;
+    padding: 0.95rem 1.5rem;
+    display: inline-flex;
+    width: 14.75rem;
+    border-radius: 10px;
+  }
+  .menu__buttonActive {
+    height: 3.4rem;
+    margin: 0.4rem 0;
+    padding: 0.95rem 1.5rem;
+    display: inline-flex;
+    background: #2e3e3e;
+    border-radius: 10px;
+    width: 14.75rem;
+  }
+  .menu__button {
+    height: 3.4rem;
+    margin: 0.4rem 0;
+    padding: 0.95rem 1.5rem;
+    display: inline-flex;
+    width: 14.75rem;
+  }
+  .menu__buttonScript {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 14px;
+    top: 0.2rem;
+  }
+  .descriptionRegMenu {
+    background: #353535;
+    display: inline-flex;
+    width: 8.9rem;
+    height: 3.2rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 25px;
+    border: 1px solid #b4ffff;
+    margin: 1.2rem 2.8rem;
+    
+  }
+  .descriptionRegMenu:hover {
+    background: #1fa3a3;
+  }
+  .reg__button-menu {
+    position: relative;
+    padding-left: 0.8rem;
+    border: none;
+    background: none;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    cursor: pointer;
+  }

@@ -1,0 +1,41 @@
+.videoplaceSection {
+    margin: 1rem 3.5rem 0 3.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 366px 366px 366px 366px;
+    grid-template-rows: 315px 315px;
+    gap: 100px 20px;
+    grid-template-areas:
+      ". . . ."
+      ". . . .";
+    overflow: hidden;
+  }
+  .video__div {
+    width: 366px;
+    height: 315px;
+  }
+  .videoplaceDescription {
+    display: inline-flex;
+    margin: 1rem 0;
+  }
+  .videoImage {
+    border-radius: 15px;
+  }
+  .accountImage {
+    margin: 0 1rem 0 0;
+  }
+  .videoplaceH1 {
+    font-size: 16px;
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .videoplaceH3 {
+    font-size: 13px;
+    font-weight: 400;
+    padding-bottom: 1.2rem;
+  }
+  .videoplaceP {
+    font-size: 13px;
+    font-weight: 400;
+  }
+  
