@@ -13,16 +13,23 @@
         <img src="{{asset('images/logo.jpg')}}" 
         style="width=:197px;height:120px" 
         class="modal-image" />
-        <form action="" class="modal-form">
-        <input placeholder="Логин" type="text" class="modal-input" required />
-        <input placeholder="Электронная почта" type="email" class="modal-input" required />
-        <input placeholder="Пароль" type="password" class="modal-input" required />
+        @if(Session::has('success'))
+        <div>
+          {{Session::get('success')}}
+        </div>
+        @endif
+        <form method="POST" action="{{route('signup')}}" class="modal-form">
+        @csrf
+        <input placeholder="Имя" id="name" name="name" type="text" class="modal-input" required />
+        <input placeholder="Логин" id="login" name="login" type="text" class="modal-input" required />
+        <input placeholder="Электронная почта" id="email" name="email" type="email" class="modal-input" required />
+        <input placeholder="Пароль" id="password" name="password" type="password" class="modal-input" required />
         <input placeholder="Повторение пароля" type="password" class="modal-input" required />
         <input value="Зарегистрироваться" type="submit" class="modal-send" />
         <div class="modal-position-reg">
         <p>Уже есть аккаунт?</p>
         <a href="#openModal">Войти</a>
-        </div>  
+        </div>
     </form>
         
       </div>

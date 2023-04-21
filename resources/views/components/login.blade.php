@@ -1,4 +1,5 @@
 <head>
+
     <link rel="stylesheet" href="{{asset('/css/login.css')}}">
 </head>
 <body>
@@ -13,9 +14,15 @@
         <img src="{{asset('images/logo.jpg')}}" 
         style="width=:197px;height:120px" 
         class="modal-image" />
-        <form action="" class="modal-form">
-        <input placeholder="Логин" type="text" class="modal-input" required />
-        <input placeholder="Пароль" type="password" class="modal-input" required />
+        @if(Session::has('error'))
+        <div>
+          {{ Session::get('error') }}
+        </div>
+        @endif
+        <form action="{{route('login')}}" method="POST" class="modal-form">
+        @csrf
+        <input id="login" name="login" placeholder="Логин" type="text" class="modal-input" required />
+        <input id="password" name="password" placeholder="Пароль" type="password" class="modal-input" required />
         <input value="Войти" type="submit" class="modal-send" />
         <div class="modal-position">
         <p>Нет аккаунта?</p>
