@@ -1,0 +1,35 @@
+Получение видео, создателя видео и лайков дизлайков видео
+
+SELECT DISTINCT video.title as 'title',
+video.description as 'description',
+video.href as 'href',
+(SELECT user.name from user WHERE user.id = (SELECT user_video.id_user FROM user_video WHERE user_video.id_video = 1)) as 'user_name_Create',
+(SELECT count(likes.id_user) FROM likes where likes.id_video = 1) as 'likes',
+(SELECT count(dislikes.id_user) FROM dislikes where dislikes.id_video = 1) as 'dislikes'
+from video where video.id = 1
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Получить всех user-ов и их комментарии по id видео
+
+
+SELECT comments.id_user, comments.text_comments from comments WHERE comments.id_video = 1
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Получить данные о видео и имя пользователя что его создал
+
+
+SELECT 
+video.title as 'video_title',
+video.img as 'video_img',
+video.description as 'video_description',
+video.creationTime as 'video_creation_time',
+user.name as 'user_name'
+FROM user_video LEFT JOIN video ON
+video.id = user_video.id_video
+LEFT JOIN user on
+user.id = user_video.id_user
+////////////////////////////////////////////////////////////////////////////////////////////
